@@ -14,7 +14,7 @@ Default Flutter gridview changes the ratio of it's container based on the screen
 
 dependencies:
 
-flutterzilla_fixed_grid: ^0.0.3
+flutterzilla_fixed_grid: ^0.0.4
 
 ```
 
