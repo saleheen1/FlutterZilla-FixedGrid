@@ -1,6 +1,6 @@
 name: flutterzilla_fixed_grid
-description: Flutter gridview changes the ratio of it's container based on the screen sizes. So, in small screen your gridview may look fine but in bigger screen it may look bad or vice versa. This package lets you use a fixed height for your gridview.
-version: 0.0.1
+description: Default Flutter gridview changes the ratio of it's container based on the screen sizes. So, in small screen your gridview may look fine but in bigger screen it may look bad or vice versa. This package lets you use a fixed height for your gridview.
+version: 0.0.3
 homepage: https://github.com/saleheen1/FlutterZilla-FixedGrid.git
 
 environment:

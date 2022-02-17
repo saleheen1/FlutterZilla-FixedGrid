@@ -1,6 +1,6 @@
-  
-![Buy me a coffee](https://i.postimg.cc/CLWWVnBF/bmc-button.png)
+  [<img  src="https://i.postimg.cc/pTS4smK5/bmc-button.png"  alt="">](https://www.buymeacoffee.com/flutterzilla)
 
+<hr>
 Flutter gridview changes the ratio of it's container based on the screen sizes. So, in small screen your gridview may look fine but in bigger screen it may look bad or vice versa. This package lets you use a fixed height for your gridview.
  
 
@@ -14,7 +14,7 @@ Flutter gridview changes the ratio of it's container based on the screen sizes. 
 
 dependencies:
 
-flutterzilla_fixed_grid: ^0.0.1
+flutterzilla_fixed_grid: ^0.0.3
 
 ```
 
@@ -50,53 +50,36 @@ There are a number of properties that you can modify:
 
 ```dart
 
-GridView.builder(
+    GridView.builder(
+      gridDelegate: const FlutterzillaFixedGridView(
+          crossAxisCount: 2,
+          mainAxisSpacing: 20,
+          crossAxisSpacing: 20,
+          height: 143),
 
-gridDelegate: const  FlutterzillaFixedGridView(
+      padding: const EdgeInsets.only(top: 30),
 
-crossAxisCount: 2,
+      itemCount: 6,
 
-mainAxisSpacing: 20,
+      shrinkWrap: true,
 
-crossAxisSpacing: 20,
+      clipBehavior: Clip.none,
 
-height: 143),
+      // childAspectRatio: 7 / 6,
 
-padding: const  EdgeInsets.only(top: 30),
+      physics: const NeverScrollableScrollPhysics(),
 
-itemCount: 6,
-
-shrinkWrap: true,
-
-clipBehavior: Clip.none,
-
-  
-
-// childAspectRatio: 7 / 6,
-
-physics: const  NeverScrollableScrollPhysics(),
-
-itemBuilder: (context, index) {
-
-return  Container(
-
-padding: const  EdgeInsets.symmetric(horizontal: 25, vertical: 25),
-
-color: Colors.purple,
-
-child: const  Text(
-
-"Your contents here",
-
-style: TextStyle(color: Colors.white),
-
-),
-
-);
-
-},
-
-)
+      itemBuilder: (context, index) {
+        return Container(
+          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 25),
+          color: Colors.purple,
+          child: const Text(
+            "Your contents here",
+            style: TextStyle(color: Colors.white),
+          ),
+        );
+      },
+    ),
 
 ```
 
