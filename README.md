@@ -1,39 +1,64 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+# FlutterZilla Fixed Sized Grid
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+Flutter gridview changes the ratio of it's container based on the screen sizes. So, in small screen your gridview may look fine but in bigger screen it may look bad or vice versa. This package lets you use a fixed height for your gridview.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Installation 
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
+1. Add the latest version of package to your pubspec.yaml (and run`flutter pub get`):
+```yaml
+dependencies:
+  flutterzilla_fixed_grid: ^0.0.1
+```
+2. Import the package and use it in your Flutter App.
 ```dart
-const like = 'sample';
+import 'package:flutterzilla_fixed_grid/flutterzilla_fixed_grid.dart';
 ```
 
-## Additional information
+## Example
+There are a number of properties that you can modify:
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+ - height
+ - crossAxisCount               
+ - mainAxisSpacing 
+ - crossAxisSpacing
+
+<hr>
+
+<table>
+<tr>
+<td>
+
+```dart
+GridView.builder(
+                gridDelegate: const FlutterzillaFixedGridView(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 20,
+                    crossAxisSpacing: 20,
+                    height: 143),
+                padding: const EdgeInsets.only(top: 30),
+                itemCount: 6,
+                shrinkWrap: true,
+                clipBehavior: Clip.none,
+
+                // childAspectRatio: 7 / 6,
+                physics: const NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 25),
+                    color: Colors.purple,
+                    child: const Text(
+                      "Your contents here",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  );
+                },
+              )
+```
+
+</td>
+<td>
+<img  src="https://i.postimg.cc/h4QffcQv/1645091374288-1.jpg"  alt="">
+</td>
+</tr>
+</table>
