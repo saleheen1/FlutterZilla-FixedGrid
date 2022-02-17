@@ -1,7 +1,7 @@
   [<img  src="https://i.postimg.cc/pTS4smK5/bmc-button.png"  alt="">](https://www.buymeacoffee.com/flutterzilla)
 
 <hr>
-Flutter gridview changes the ratio of it's container based on the screen sizes. So, in small screen your gridview may look fine but in bigger screen it may look bad or vice versa. This package lets you use a fixed height for your gridview.
+Default Flutter gridview changes the ratio of it's container based on the screen sizes. So, in small screen your gridview may look fine but in bigger screen it may look bad or vice versa. This package lets you use a fixed height for your gridview.
  
 
 ## Installation
@@ -56,19 +56,11 @@ There are a number of properties that you can modify:
           mainAxisSpacing: 20,
           crossAxisSpacing: 20,
           height: 143),
-
       padding: const EdgeInsets.only(top: 30),
-
       itemCount: 6,
-
       shrinkWrap: true,
-
       clipBehavior: Clip.none,
-
-      // childAspectRatio: 7 / 6,
-
       physics: const NeverScrollableScrollPhysics(),
-
       itemBuilder: (context, index) {
         return Container(
           padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 25),
