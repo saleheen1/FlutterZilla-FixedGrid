@@ -1,64 +1,104 @@
-
-# FlutterZilla Fixed Sized Grid
+  
+![Buy me a coffee](https://i.postimg.cc/CLWWVnBF/bmc-button.png)
 
 Flutter gridview changes the ratio of it's container based on the screen sizes. So, in small screen your gridview may look fine but in bigger screen it may look bad or vice versa. This package lets you use a fixed height for your gridview.
+ 
 
-## Installation 
+## Installation
+
+  
 
 1. Add the latest version of package to your pubspec.yaml (and run`flutter pub get`):
+
 ```yaml
+
 dependencies:
-  flutterzilla_fixed_grid: ^0.0.1
+
+flutterzilla_fixed_grid: ^0.0.1
+
 ```
+
 2. Import the package and use it in your Flutter App.
+
 ```dart
-import 'package:flutterzilla_fixed_grid/flutterzilla_fixed_grid.dart';
+
+import  'package:flutterzilla_fixed_grid/flutterzilla_fixed_grid.dart';
+
 ```
+
+  
 
 ## Example
+
 There are a number of properties that you can modify:
 
- - height
- - crossAxisCount               
- - mainAxisSpacing 
- - crossAxisSpacing
+  
+
+- height
+
+- crossAxisCount
+
+- mainAxisSpacing
+
+- crossAxisSpacing
+
+  
 
 <hr>
 
-<table>
-<tr>
-<td>
+  
 
 ```dart
-GridView.builder(
-                gridDelegate: const FlutterzillaFixedGridView(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 20,
-                    crossAxisSpacing: 20,
-                    height: 143),
-                padding: const EdgeInsets.only(top: 30),
-                itemCount: 6,
-                shrinkWrap: true,
-                clipBehavior: Clip.none,
 
-                // childAspectRatio: 7 / 6,
-                physics: const NeverScrollableScrollPhysics(),
-                itemBuilder: (context, index) {
-                  return Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 25),
-                    color: Colors.purple,
-                    child: const Text(
-                      "Your contents here",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  );
-                },
-              )
+GridView.builder(
+
+gridDelegate: const  FlutterzillaFixedGridView(
+
+crossAxisCount: 2,
+
+mainAxisSpacing: 20,
+
+crossAxisSpacing: 20,
+
+height: 143),
+
+padding: const  EdgeInsets.only(top: 30),
+
+itemCount: 6,
+
+shrinkWrap: true,
+
+clipBehavior: Clip.none,
+
+  
+
+// childAspectRatio: 7 / 6,
+
+physics: const  NeverScrollableScrollPhysics(),
+
+itemBuilder: (context, index) {
+
+return  Container(
+
+padding: const  EdgeInsets.symmetric(horizontal: 25, vertical: 25),
+
+color: Colors.purple,
+
+child: const  Text(
+
+"Your contents here",
+
+style: TextStyle(color: Colors.white),
+
+),
+
+);
+
+},
+
+)
+
 ```
 
-</td>
-<td>
-<img  src="https://i.postimg.cc/h4QffcQv/1645091374288-1.jpg"  alt="">
-</td>
-</tr>
-</table>
+
+[<img  src="https://i.postimg.cc/h4QffcQv/1645091374288-1.jpg"  alt="">](https://www.buymeacoffee.com/flutterzilla)
